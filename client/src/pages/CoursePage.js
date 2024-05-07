@@ -8,7 +8,7 @@ const CoursePage = () => {
 
   useEffect(() => {
     const fetchReviews = async () => {
-      const response = await fetch("/api/reviews/course/" + courseNumber);
+      const response = await fetch("https://project-server-virid.vercel.app/api/reviews/course/" + courseNumber);
       const json = await response.json();
 
       if (response.ok) {

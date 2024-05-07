@@ -8,7 +8,7 @@ function Home() {
   const [courses, setCourses] = useState(null);
 
   const fetchCourses = async () => {
-    const response = await fetch("/api/reviews/courses/");
+    const response = await fetch("https://project-server-virid.vercel.app/api/reviews/courses/");
     const json = await response.json();
 
     if (response.ok) {

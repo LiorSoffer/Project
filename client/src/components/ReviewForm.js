@@ -18,9 +18,9 @@ const ReviewForm = ({ fetchCourses }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const responseC = await fetch("/api/reviews/courses/");
+    const responseC = await fetch("https://project-server-virid.vercel.app/api/reviews/courses/");
     const jsonC = await responseC.json();
-    let createUrl = "/api/reviews/new";
+    let createUrl = "https://project-server-virid.vercel.app/api/reviews/new";
     let realCourseName = courseName;
     if (responseC.ok) {
       let found = false;
@@ -31,7 +31,7 @@ const ReviewForm = ({ fetchCourses }) => {
       }
       if (found) {
         realCourseName = jsonC[index].courseName;
-        createUrl = "/api/reviews/exist";
+        createUrl = "https://project-server-virid.vercel.app/api/reviews/exist";
       }
     }
 
