@@ -29,7 +29,7 @@ mongoose
     app.listen(4000, () => {
       console.log(
         "connect to db & listening for requests on port",
-        process.env.PORT
+        4000
       );
     });
   })
