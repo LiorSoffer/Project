@@ -1,14 +1,4 @@
 {
-  "version": 2,
-  "builds": [{ "src": "index.js", "use": "@vercel/node" }],
-  "routes": [
-    {
-      "src": "/api/reviews(.*)",
-      "dest": "/routes/reviewsRouter"
-    },
-    {
-      "src": "/api/user(.*)",
-      "dest": "/routes/userRouter"
-    }
-  ]
+	"version": 2,
+	"rewrites": [{ "source": "/(.*)", "destination": "/api" }]
 }
