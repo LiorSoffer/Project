@@ -4,11 +4,11 @@
   "routes": [
     {
       "src": "/api/reviews(.*)",
-      "dest": "/routes/reviewsRouter$1"
+      "dest": "/routes/reviewsRouter"
     },
     {
       "src": "/api/user(.*)",
-      "dest": "/routes/userRouter$1"
+      "dest": "/routes/userRouter"
     }
   ]
 }
