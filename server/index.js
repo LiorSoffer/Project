@@ -20,6 +20,12 @@ app.use((req, res, next) => {
 app.use("/api/reviews", reviews);
 app.use("/api/user", users);
 
+
+// 404 error handler
+app.use((req, res, next) => {
+  res.status(404).json({ message: "Resource not found" });
+});
+
 // connect to db
 mongoose
   .connect("mongodb+srv://liorsoffer1:1234@cluster0.lrvydhh.mongodb.net/")
