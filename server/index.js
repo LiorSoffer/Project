@@ -22,11 +22,11 @@ app.use("/api/user", users);
 
 // connect to db
 mongoose
-  .connect(process.env.MONGO_URI)
+  .connect("mongodb+srv://liorsoffer1:1234@cluster0.lrvydhh.mongodb.net/")
   .then(() => {
     console.log("connected to database");
     // listen to port
-    app.listen(process.env.PORT, () => {
+    app.listen(4000, () => {
       console.log(
         "connect to db & listening for requests on port",
         process.env.PORT
