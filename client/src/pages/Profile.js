@@ -6,7 +6,7 @@ const Profile = () => {
   let user = JSON.parse(localStorage.getItem("user"));
 
   const fetchReviews = async () => {
-    const response = await fetch("https://project-server-virid.vercel.apphttps://project-server-virid.vercel.app/api/reviews/user/" + user.email);
+    const response = await fetch("https://project-server-virid.vercel.app/api/reviews/user/" + user.email);
 
     const json = await response.json();
     if (response.ok) {
@@ -24,7 +24,7 @@ const Profile = () => {
       return;
     }
 
-    const response = await fetch("https://project-server-virid.vercel.apphttps://project-server-virid.vercel.app/api/reviews/" + review._id, {
+    const response = await fetch("https://project-server-virid.vercel.app/api/reviews/" + review._id, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
